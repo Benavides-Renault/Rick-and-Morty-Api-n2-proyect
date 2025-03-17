@@ -1,0 +1,14 @@
+.hero {
+  background-color: lightblue;
+  width: 100%;
+  height: 35dvb;
+  background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnN1b2hscnpiYXBuN2R4bWs4ODJybHN4amhhZGppaW53MTkwZncyNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zPlGxzu027rEELiCFr/giphy.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 5 vh;
+  }
+}

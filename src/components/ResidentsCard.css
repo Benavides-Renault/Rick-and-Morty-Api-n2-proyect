@@ -1,0 +1,135 @@
+.resident_card {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+.resident_header {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.resident_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.resident_status {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  background-color: #dcdcdc;
+  padding: 0.5em 1em;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bolder;
+  z-index: 10;
+  font-size: large;
+}
+
+.status_indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status_indicator.Alive {
+  background-color: green;
+  animation: blink 1s infinite alternate;
+}
+
+.status_indicator.Dead {
+  background-color: red;
+}
+
+.status_indicator.unknown {
+  background-color: gray;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.3; }
+}
+
+.resident_dead .resident_img {
+  filter: grayscale(100%);
+}
+
+.resident_missing .resident_img {
+  filter: brightness(0.6) saturate(0.5);
+}
+
+.resident_dead::before,
+.resident_dead::after {
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: 150%;
+  background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.25), rgba(255, 0, 0, 0.25));
+  z-index: 2;
+  pointer-events: none;
+}
+
+.resident_dead::before {
+  top: -50%;
+  left: 50%;
+  transform: rotate(45deg);
+}
+
+.resident_dead::after {
+  top: -38%;
+  left: 50%;
+  transform: rotate(135deg);
+}
+
+.resident_missing::after {
+  content: '?';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.resident_body {
+  padding: 1em 1.5em;
+  background-color: rgba(112, 168, 38, 0.753);
+  position: relative;
+  z-index: 3;
+}
+
+.resident_name {
+  border-bottom: 3px solid rgb(0, 0, 0);
+  margin: 0;
+  padding-bottom: .40em;
+  margin-bottom: .40em;
+}
+
+.resident_info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.15em;
+}
+
+.resident_item {
+  color: rgb(255, 255, 255);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.resident_span {
+  color: rgb(0, 0, 0);
+  font-weight: bold;  
+}

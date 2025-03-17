@@ -1,0 +1,43 @@
+.locationInfo {
+  padding: 2.5em 1em;
+  display: grid;
+  place-content: center;
+}
+
+.locationInfo_container {
+  max-width: 600px;
+  min-width: 300px;
+  width: 100%;
+  padding: 1em;
+  border-radius: 35px;
+  box-shadow: 3.5px 3.5px 0px 3px rgba(112, 169, 37, 0.6);
+  background-color: rgb(8, 34, 39);
+}
+
+.locationInfo_name {
+  color: rgb(112, 169, 37);
+  text-align: center;
+}
+
+.locationInfo_info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: small;
+}
+
+.locationInfo_item {
+  color: rgba(112, 169, 37, 0.75);
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.locationInfo_spam {
+ display: block; 
+ color: rgb(255, 255, 255);
+ font-weight: 700;
+}
