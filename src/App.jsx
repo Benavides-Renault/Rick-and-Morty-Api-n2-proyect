@@ -8,6 +8,7 @@ import ResidentsList from './components/ResidentsList';
 
 const baseUrl = 'https://rickandmortyapi.com/api/location/';
 
+
 function App() {
 	const { data: location, request, loading } = useFetchApi();
 	const [locationId, setLocationId] = useState(getRandomNumber);
