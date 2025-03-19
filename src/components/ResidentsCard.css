@@ -3,6 +3,16 @@
   overflow: hidden;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.75);
   position: relative;
+  background: #082327;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.resident_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .resident_header {
@@ -93,7 +103,7 @@
 .resident_missing::after {
   content: '?';
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 200px;
@@ -103,17 +113,20 @@
 }
 
 .resident_body {
-  padding: 1em 1.5em;
-  background-color: rgba(112, 168, 38, 0.753);
+  padding: 1.5rem;
+  background: rgba(112, 168, 38, 0.753);
+  flex-grow: 1;
   position: relative;
   z-index: 3;
 }
 
 .resident_name {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 1rem;
   border-bottom: 3px solid rgb(0, 0, 0);
-  margin: 0;
-  padding-bottom: .40em;
-  margin-bottom: .40em;
+  padding-bottom: 0.75em;
+  word-wrap: break-word;
 }
 
 .resident_info {
@@ -126,10 +139,11 @@
 .resident_item {
   color: rgb(255, 255, 255);
   text-transform: capitalize;
-  font-weight: 500;
+  font-weight: 700;
+  word-wrap: break-word;
 }
 
 .resident_span {
   color: rgb(0, 0, 0);
-  font-weight: bold;  
+  font-weight: bold;
 }
